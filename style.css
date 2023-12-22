@@ -2,8 +2,58 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.image-logo {
+    margin: 10px;
+}
+
+.image-logo img {
+    width: 100px;
+}
+
+.company-name {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    margin-bottom: 5;
+    /* Або overflow-wrap: break-word; */
+}
+.company-slogan {
+    margin-top: 0;
+}
+
 header {
-    /* height: 230px; */
-    width: 100%;
     background-color: #dcdcdc;
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.right.logo {
+    display: flex;
+    align-items: center;
+}
+
+.left.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .right.logo,
+    .left.contact {
+        margin-bottom: 20px;
+    }
 }
