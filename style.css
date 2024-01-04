@@ -1,59 +1,80 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    margin: 0;
+    line-height: 22px;
+    font-family:'PT Sans', sans-serif; 
+    font-size: 14px;
+}
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
 }
-
-.image-logo {
-    margin: 10px;
-}
-
-.image-logo img {
-    width: 100px;
-}
-
-.company-name {
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    margin-bottom: 5;
-    /* Або overflow-wrap: break-word; */
-}
-.company-slogan {
-    margin-top: 0;
-}
-
-header {
-    background-color: #dcdcdc;
-    padding: 20px 0;
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.right.logo {
-    display: flex;
-    align-items: center;
-}
-
-.left.contact {
+.wrapper {
+    min-height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+}
+.doc-main {
+    flex-grow: 1;
 }
 
-@media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        text-align: center;
-    }
+/* header left */
+.doc-header {
+    background-color: #dcdcdc;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+.doc-header-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 980px;
+}
+.header-logo-block {
+    display: flex;
+    align-items: center;
+    width: 275px;
+}
+.header-logo-block img {
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+}
+.logo-name {
+    margin-left: 10px;
+}
+.company-name {
+    font-size: 22px;
+}
 
-    .right.logo,
-    .left.contact {
-        margin-bottom: 20px;
+/* header right */
+.header-contact-block{
+    text-align: right;
+}
+.header-contact-block ul {
+    list-style-type: none; 
+    font-weight: 1000; 
+}
+.header-contact-block li {
+    font-size: 22px;
+}
+.header-contact-block p {
+    text-decoration: underline dotted 2px ;
+}
+
+/* footer  */
+.doc-footer {
+    background-color:#777777 ;
+    height: 100px;
+}
+
+/* adaptive */
+@media screen and(max-width:1000px) {
+    .doc-header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
