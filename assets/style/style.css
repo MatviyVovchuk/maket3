@@ -21,6 +21,9 @@ html, body {
 .doc-main {
     flex-grow: 1;
 }
+.open{
+    display: flex !important;
+}
 
 /* HEADER LEFT */
 .doc-header {
@@ -172,8 +175,8 @@ html, body {
     /* BURGER */
     .menu-burger {
         display: flex;
-        justify-content: start;
-        right: 50%;
+        justify-content: flex-end;
+        right: 0;
     }
     .menu-nav {
         display: flex;
@@ -181,7 +184,7 @@ html, body {
         align-items: start;
     }
     .menu-nav-ul {
-      display: none;
+        display: none;
         flex-direction: column;
         align-items: flex-start;
         position: fixed;
