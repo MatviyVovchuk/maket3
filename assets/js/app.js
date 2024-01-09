@@ -1,8 +1,8 @@
 /* MENU BURGER */
 
-document.querySelector('.menu-burger').addEventListener('click', function(){
-    this.classList.toggle('active');
-    document.querySelector('.menu-nav-ul').classList.toggle('open');
+document.querySelector(".menu-burger").addEventListener("click", function () {
+    this.classList.toggle("active");
+    document.querySelector(".menu-nav-ul").classList.toggle("open");
 });
 
 /* SLIDER */
@@ -19,7 +19,7 @@ $('.slider').slick({
     initialSlide: 0,
     autoplay: true,
     autoplaySpeed: 4000,
-    // fade: true,
+    fade: true,
     cssEase: 'linear',
 });
 
