@@ -23,7 +23,7 @@ $('.slider').slick({
     cssEase: 'linear',
 });
 
-// Button click functions
+// Button slider navigation
 $(".slider-btn-prew").click(function () {
     $(".slider").slick("slickPrev");
 });
