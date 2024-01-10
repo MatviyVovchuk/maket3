@@ -31,3 +31,18 @@ $(".slider-btn-prew").click(function () {
 $(".slider-btn-next").click(function () {
     $(".slider").slick("slickNext");
 });
+
+/* SUBCATEGORY DROPDOWN */
+
+$(document).ready(function() {
+    // Hide subcategory dropdowns by default
+    $('.subcategory-dropdown').hide();
+
+    // Add click event to category items
+    $('.category-item').click(function(event) {
+        event.preventDefault();
+
+        // Toggle the display of the subcategory-dropdown with sliding animation
+        $(this).find('.subcategory-dropdown').slideToggle();
+    });
+});
