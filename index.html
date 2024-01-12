@@ -1,234 +1,307 @@
 <!DOCTYPE html>
 <html lang="ua">
-
-<head>
+  <head>
     <title>Maket 3</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-    <link rel="stylesheet" href="assets/style/style.css">
-</head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link rel="stylesheet" href="assets/style/style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="wrapper">
-        <header class="doc-header">
-            <div class="doc-header-content">
-                <div class="header-logo-block">
-                    <div class="logo-image">
-                        <img src="assets/img/logo.webp" alt="logo">
-                        <!-- <img src="https://placehold.co/100x100" alt="logo"> -->
-                        <!-- <div style="background-color: #777777; width: 100px; height: 100px;"></div> -->
-                    </div>
-                    <div class="logo-name">
-                        <h1 class="company-name">Назва компанії</h1>
-                        <p class="company-slogan">сама класна компанія</p>
-                    </div>
-                </div>
-                <div class="header-contact-block">
-                    <ul class="header-contact-block-phone">
-                        <li><a href="tel:+74997777777">+7(499) 777-77-77</a></li>
-                        <li><a href="tel:+74997777777">+7(499) 777-77-77</a></li>
+      <header class="doc-header">
+        <div class="doc-header-content">
+          <div class="header-logo-block">
+            <div class="logo-image">
+              <img src="assets/img/logo.webp" alt="logo" />
+              <!-- <img src="https://placehold.co/100x100" alt="logo"> -->
+              <!-- <div style="background-color: #777777; width: 100px; height: 100px;"></div> -->
+            </div>
+            <div class="logo-name">
+              <h1 class="company-name">Назва компанії</h1>
+              <p class="company-slogan">сама класна компанія</p>
+            </div>
+          </div>
+          <div class="header-contact-block">
+            <ul class="header-contact-block-phone">
+              <li><a href="tel:+74997777777">+7(499) 777-77-77</a></li>
+              <li><a href="tel:+74997777777">+7(499) 777-77-77</a></li>
+            </ul>
+            <p><a href="#">Зворотній зв'язок</a></p>
+          </div>
+        </div>
+      </header>
+
+      <main class="doc-main">
+        <menu class="main-menu">
+          <nav class="menu-nav">
+            <ul class="menu-nav-ul">
+              <li><a href="#">Головна</a></li>
+              <li><a href="#">Каталог</a></li>
+              <li><a href="#">Доставка та оплата</a></li>
+              <li><a href="#">Прайс-лист</a></li>
+              <li><a href="#">Контакти</a></li>
+            </ul>
+          </nav>
+          <div class="menu-burger">
+            <span></span>
+          </div>
+        </menu>
+
+        <div class="slider-content">
+          <div class="slider">
+            <div class="slide-item">
+              <img src="assets/img/slide_1.png" alt="first slide" />
+            </div>
+            <div class="slide-item">
+              <img src="assets/img/slide_2.png" alt="second slide" />
+            </div>
+            <div class="slide-item">
+              <img src="assets/img/slider.png" alt="no number slide" />
+            </div>
+            <div class="slide-item">
+              <img src="https://placehold.co/1300x400" alt="test" />
+            </div>
+          </div>
+          <div class="slider-navigate-btn">
+            <button class="slider-btn-prew">&#8249;</button>
+            <button class="slider-btn-next">&#8250;</button>
+          </div>
+        </div>
+
+        <div class="main-content">
+          <div class="container">
+            <div class="breadcrumb">
+              <ul>
+                <li><a href="#">Головна</a></li>
+                <li><a href="#">Каталог</a></li>
+                <li><span>Побутова техніка</span></li>
+              </ul>
+            </div>
+            <div class="content-container">
+              <div class="content-left">
+                <ul class="category-menu">
+                  <li class="category-item">
+                    <a href="#">Автомобілі</a>
+                    <ul class="subcategory-dropdown">
+                      <li><a href="#">Audi</a></li>
+                      <li><a href="#">BMW</a></li>
+                      <li><a href="#">Porshe</a></li>
+                      <li><a href="#">Volvo</a></li>
                     </ul>
-                    <p>Зворотній зв'язок</p>
-                </div>
-            </div>
-        </header>
-
-        <main class="doc-main">
-            <menu class="main-menu">
-                <nav class="menu-nav">
-                    <ul class="menu-nav-ul">
-                        <li><a href="#">Головна</a></li>
-                        <li><a href="#">Каталог</a></li>
-                        <li><a href="#">Доставка та оплата</a></li>
-                        <li><a href="#">Прайс-лист</a></li>
-                        <li><a href="#">Контакти</a></li>
+                  </li>
+                  <li class="category-item">
+                    <a href="#">Побутова техніка</a>
+                    <ul class="subcategory-dropdown">
+                      <li><a href="#">Мікрохвильовки</a></li>
+                      <li><a href="#">Холодильники</a></li>
+                      <li><a href="#">Посудомийки</a></li>
+                      <li><a href="#">Чайники</a></li>
                     </ul>
-                </nav>
-                <div class="menu-burger">
-                    <span></span>
+                  </li>
+                  <li class="category-item">
+                    <a href="#">Мобільна техніка</a>
+                    <ul class="subcategory-dropdown"></ul>
+                  </li>
+                  <li class="category-item">
+                    <a href="#">Комп'ютери</a>
+                    <ul class="subcategory-dropdown"></ul>
+                  </li>
+                  <li class="category-item">
+                    <a href="#">Одяг</a>
+                    <ul class="subcategory-dropdown"></ul>
+                  </li>
+                  <li class="category-item">
+                    <a href="#">Нерухомість</a>
+                    <ul class="subcategory-dropdown"></ul>
+                  </li>
+                </ul>
+                <div class="category-menu-price-list">
+                  <div class="left-image">
+                    <img
+                      class="price-list-img"
+                      src="assets/img/price_list.png"
+                      alt="price list"
+                    />
+                  </div>
+                  <div class="price-list-lable">
+                    <h1>Прайс-лист</h1>
+                  </div>
                 </div>
-            </menu>
-
-            <div class="slider-content">
-                <div class="slider">
-                    <div class="slide-item"><img src="assets/img/slide_1.png"></div>
-                    <div class="slide-item"><img src="assets/img/slide_2.png"></div>
-                    <div class="slide-item"><img src="assets/img/slider.png"></div>
-                    <div class="slide-item"><img src="https://placehold.co/1250x400"></div>
-                </div>
-                <div class="slider-navigate-btn">
-                    <button class="slider-btn-prew">&#8249;</button>
-                    <button class="slider-btn-next">&#8250;</button>
-                </div>
-            </div>
-
-            <div class="main-content">
-                <div class="container">
-                    <div class="breadcrumb">
-                        <ul>
-                            <li><a href="#">Головна</a></li>
-                            <li><a href="#">Каталог</a></li>
-                            <li><span>Побутова техніка</span></li>
-                        </ul>
+              </div>
+              <div class="content-right">
+                <div class="store-goods-container">
+                  <div class="store-goods-item">
+                    <img
+                      class="goods-item-image"
+                      src="assets/img/no_image.jpg"
+                      alt="no image"
+                    />
+                    <p>
+                      <a href="#"
+                        >Самий крутий товар, треба купувати обов'язково!</a
+                      >
+                    </p>
+                    <div class="store-goods-item-price">
+                      <h1>1 900 грн.</h1>
+                      <a href="#"
+                        ><img src="assets/img/icon_basket.svg" alt="basket"
+                      /></a>
                     </div>
-                    <div class="content-container">
-                        <div class="content-left">
-                            <ul class="category-menu">
-                                <li class="category-item">
-                                    <a href="#">Автомобілі</a>
-                                    <ul class="subcategory-dropdown">
-                                        <li><a href="#">Audi</a></li>
-                                        <li><a href="#">BMW</a></li>
-                                        <li><a href="#">Porshe</a></li>
-                                        <li><a href="#">Volvo</a></li>
-                                    </ul>
-                                </li>
-                                <li class="category-item">
-                                    <a href="#">Побутова техніка</a>
-                                    <ul class="subcategory-dropdown">
-                                        <li><a href="#">Мікрохвильовки</a></li>
-                                        <li><a href="#">Холодильники</a></li>
-                                        <li><a href="#">Посудомийки</a></li>
-                                        <li><a href="#">Чайники</a></li>
-                                    </ul>
-                                </li>
-                                <li class="category-item">
-                                    <a href="#">Мобільна техніка</a>
-                                    <ul class="subcategory-dropdown">
-
-                                    </ul>
-                                </li>
-                                <li class="category-item">
-                                    <a href="#">Комп'ютери</a>
-                                    <ul class="subcategory-dropdown">
-
-                                    </ul>
-                                </li>
-                                <li class="category-item">
-                                    <a href="#">Одяг</a>
-                                    <ul class="subcategory-dropdown">
-
-                                    </ul>
-                                </li>
-                                <li class="category-item">
-                                    <a href="#">Нерухомість</a>
-                                    <ul class="subcategory-dropdown">
-
-                                    </ul>
-                                </li>
-                            </ul>
-                            <div class="category-menu-price-list">
-                                <div class="left-image">
-                                    <img class="price-list-img" src="assets/img/price_list.png" alt="price list" />
-                                </div>
-                                <div class="price-list-lable">
-                                    <h1>Прайс-лист</h1>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="content-right">
-                            <div class="store-goods-container">
-                                <div class="store-goods-item">
-                                    <img class="goods-item-image" src="assets/img/no_image.jpg" alt="no image">
-                                    <p><a href="#">Самий крутий товар, треба купувати обов'язково!</a></p>
-                                    <div class="store-goods-item-price">
-                                        <h1>1 900 грн.</h1>
-                                        <a href="#"><img src="assets/img/icon_basket.svg" alt="basket" /></a>
-                                    </div>
-                                </div>
-                                <div class="store-goods-item">
-                                    <img class="goods-item-image" src="assets/img/no_image.jpg" alt="no image">
-                                    <p><a href="#">Самий крутий товар, треба купувати обов'язково!</a></p>
-                                    <div class="store-goods-item-price">
-                                        <h1>1 900 грн.</h1>
-                                        <a href="#"><img src="assets/img/icon_basket.svg" alt="basket" /></a>
-                                    </div>
-                                </div>
-                                <div class="store-goods-item">
-                                    <img class="goods-item-image" src="assets/img/no_image.jpg" alt="no image">
-                                    <p><a href="#">Самий крутий товар, треба купувати обов'язково!</a></p>
-                                    <div class="store-goods-item-price">
-                                        <h1>1 900 грн.</h1>
-                                        <a href="#"><img src="assets/img/icon_basket.svg" alt="basket" /></a>
-                                    </div>
-                                </div>
-                                <div class="store-goods-item">
-                                    <img class="goods-item-image" src="assets/img/no_image.jpg" alt="no image">
-                                    <p><a href="#">Самий крутий товар, треба купувати обов'язково!</a></p>
-                                    <div class="store-goods-item-price">
-                                        <h1>1 900 грн.</h1>
-                                        <a href="#"><img src="assets/img/icon_basket.svg" alt="basket" /></a>
-                                    </div>
-                                </div>
-                                <div class="store-goods-item">
-                                    <img class="goods-item-image" src="assets/img/no_image.jpg" alt="no image">
-                                    <p><a href="#">Самий крутий товар, треба купувати обов'язково!</a></p>
-                                    <div class="store-goods-item-price">
-                                        <h1>1 900 грн.</h1>
-                                        <a href="#"><img src="assets/img/icon_basket.svg" alt="basket" /></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="content-pagination">
-                                <ul>
-                                    <li><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li class="pagination-active"><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li><a href="#">6</a></li>
-                                    <li><a href="#">7</a></li>
-                                </ul>
-                            </div>
-                            <hr class="content-separate-line" />
-                            <div class="content-bottom-text">
-                                <p>
-                                    Компания «Пиксель Плюс» существует более 6 лет, за это время мы принимали участие в разработке более чем 700 сайтов, поэтому можем уверенно называть себя профессионалами. На данный момент наш коллектив состоит из более чем 30 сотрудников работающих в двух офисах в Москве и Зеленограде.характерные для этого жанра мотивы: неразделённой любви, ухода молодости, угасания души. 
-                                </p>
-                                <p>
-                                    Одним из основных направлений работ нашей компании является поисковое продвижение сайтов, на данной момент мы работаем с более чем 150 постоянными клиентами по более чем 11 000 поисковым запросам. При этом в работе основной акцент мы делаем на качестве работ, а так же применяем собственные уникальные разработки в области SEO продвижения. На данный момент отдел SEO состоит из 9 человек под руководством ведущего специалиста, преимущественно работающих в нашем московском офисе.
-                                </p>
-                              </div>
-                        </div>
-                        
+                  </div>
+                  <div class="store-goods-item">
+                    <img
+                      class="goods-item-image"
+                      src="assets/img/no_image.jpg"
+                      alt="no image"
+                    />
+                    <p>
+                      <a href="#"
+                        >Самий крутий товар, треба купувати обов'язково!</a
+                      >
+                    </p>
+                    <div class="store-goods-item-price">
+                      <h1>1 900 грн.</h1>
+                      <a href="#"
+                        ><img src="assets/img/icon_basket.svg" alt="basket"
+                      /></a>
                     </div>
-
-
+                  </div>
+                  <div class="store-goods-item">
+                    <img
+                      class="goods-item-image"
+                      src="assets/img/no_image.jpg"
+                      alt="no image"
+                    />
+                    <p>
+                      <a href="#"
+                        >Самий крутий товар, треба купувати обов'язково!</a
+                      >
+                    </p>
+                    <div class="store-goods-item-price">
+                      <h1>1 900 грн.</h1>
+                      <a href="#"
+                        ><img src="assets/img/icon_basket.svg" alt="basket"
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="store-goods-item">
+                    <img
+                      class="goods-item-image"
+                      src="assets/img/no_image.jpg"
+                      alt="no image"
+                    />
+                    <p>
+                      <a href="#"
+                        >Самий крутий товар, треба купувати обов'язково!</a
+                      >
+                    </p>
+                    <div class="store-goods-item-price">
+                      <h1>1 900 грн.</h1>
+                      <a href="#"
+                        ><img src="assets/img/icon_basket.svg" alt="basket"
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="store-goods-item">
+                    <img
+                      class="goods-item-image"
+                      src="assets/img/no_image.jpg"
+                      alt="no image"
+                    />
+                    <p>
+                      <a href="#"
+                        >Самий крутий товар, треба купувати обов'язково!</a
+                      >
+                    </p>
+                    <div class="store-goods-item-price">
+                      <h1>1 900 грн.</h1>
+                      <a href="#"
+                        ><img src="assets/img/icon_basket.svg" alt="basket"
+                      /></a>
+                    </div>
+                  </div>
                 </div>
+                <div class="content-pagination">
+                  <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li class="pagination-active"><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                  </ul>
+                </div>
+                <hr class="content-separate-line" />
+                <div class="content-bottom-text">
+                  <p>
+                    Компания «Пиксель Плюс» существует более 6 лет, за это время
+                    мы принимали участие в разработке более чем 700 сайтов,
+                    поэтому можем уверенно называть себя профессионалами. На
+                    данный момент наш коллектив состоит из более чем 30
+                    сотрудников работающих в двух офисах в Москве и
+                    Зеленограде.характерные для этого жанра мотивы:
+                    неразделённой любви, ухода молодости, угасания души.
+                  </p>
+                  <p>
+                    Одним из основных направлений работ нашей компании является
+                    поисковое продвижение сайтов, на данной момент мы работаем с
+                    более чем 150 постоянными клиентами по более чем 11 000
+                    поисковым запросам. При этом в работе основной акцент мы
+                    делаем на качестве работ, а так же применяем собственные
+                    уникальные разработки в области SEO продвижения. На данный
+                    момент отдел SEO состоит из 9 человек под руководством
+                    ведущего специалиста, преимущественно работающих в нашем
+                    московском офисе.
+                  </p>
+                </div>
+              </div>
             </div>
-        </main>
+          </div>
+        </div>
+      </main>
 
-        <footer class="doc-footer">
-            <div class="content-footer">
-                <div class="footer-company-email">
-                    <p>&#169; 2012–2013 ЗАО &#171;Компанія&#187;</p>
-                    <p><a href="mailto:randomguy@gmail.com">info@name.ua</a></p>
-                </div>
-                <div class="footer-menu">
-                    <ul>
-                        <li><a href="#">Головна</a></li>
-                        <li><a href="#">Каталог</a></li>
-                        <li><a href="#">Доставка то оплата</a></li>
-                        <li><a href="#">Прайс-лист</a></li>
-                        <li><a href="#">Контакти</a></li>
-                    </ul>
-                </div>
-                <div class="footer-company-logo">
-                    <img src="assets/img/footer_logo.svg" alt="footer company logo">
-                    <p><a href="#">Розробка сайту</a> –<br>компанія &#171;Gray square&#187;</p>
-                </div>
-            </div>
-        </footer>
+      <footer class="doc-footer">
+        <div class="content-footer">
+          <div class="footer-company-email">
+            <p>&#169; 2012-2013 ЗАО &#171;Компанія&#187;</p>
+            <p><a href="mailto:randomguy@gmail.com">info@name.ua</a></p>
+          </div>
+          <div class="footer-menu">
+            <ul>
+              <li><a href="#">Головна</a></li>
+              <li><a href="#">Каталог</a></li>
+              <li><a href="#">Доставка то оплата</a></li>
+              <li><a href="#">Прайс-лист</a></li>
+              <li><a href="#">Контакти</a></li>
+            </ul>
+          </div>
+          <div class="footer-company-logo">
+            <img src="assets/img/footer_logo.svg" alt="footer company logo" />
+            <p>
+              <a href="#">Розробка сайту</a> –<br />компанія &#171;Gray
+              square&#187;
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
-</body>
-<!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  </body>
+  <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
-<script src="assets/js/jquery-3.7.1.min.js"></script>
-<script src="assets/js/slick.min.js"></script>
-<script src="assets/js/app.js"></script>
-
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script src="assets/js/slick.min.js"></script>
+  <script src="assets/js/app.js"></script>
 </html>
