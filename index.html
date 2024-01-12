@@ -70,9 +70,9 @@
             <div class="slide-item">
               <img src="assets/img/slider.png" alt="no number slide" />
             </div>
-            <div class="slide-item">
+            <!-- <div class="slide-item">
               <img src="https://placehold.co/1300x400" alt="test" />
-            </div>
+            </div> -->
           </div>
           <div class="slider-navigate-btn">
             <button class="slider-btn-prew">&#8249;</button>
@@ -298,6 +298,29 @@
         </div>
       </footer>
     </div>
+    <!-- MODAL FROM START -->
+    <div id="modal_background"></div>
+    <div id="modal">
+      <div id="modal_close">
+        <button>&#x2715;</button>
+        <!-- &#215; &#10006; &#x2715; -->
+      </div>
+      <form action="/submit_action" method="post">
+        <div id="form_fields_container">
+          <h1>ЗВОРОТНІЙ ЗВ'ЯЗОК </h1>
+          <p>Ваше імя*</p>
+          <input type="text" id="field_name" placeholder="" required />
+          <p>Телефон*</p>
+          <input type="text" id="field_phone" placeholder="" required />
+          <p>Email*</p>
+          <input type="text" id="field_email" placeholder="" required />
+          <p>Повідомлення</p>
+          <textarea name="" id="field_message" cols="20" rows="5"></textarea>
+          <button id="submit_button">ВІДПРАВИТИ</button>
+        </div>
+      </form>
+    </div>
+    <!-- MODAL FROM END -->
   </body>
   <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
