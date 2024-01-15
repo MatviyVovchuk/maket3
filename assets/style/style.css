@@ -78,6 +78,8 @@ body {
 
 .header-contact-block {
   text-align: right;
+  position: relative;
+  top: -20px;
 }
 
 .header-contact-block ul {
@@ -87,21 +89,14 @@ body {
   padding: 0;
 }
 
-.header-contact-block-phone {
+.header-contact-block-phone a {
   line-height: 1.5;
   display: inline-block;
   transform: scaleY(1.4);
   transform-origin: center left;
   letter-spacing: 1.8px;
   font-weight: 300;
-}
-
-.header-contact-block-phone a,
-.header-contact-block p {
   font-size: 24px;
-}
-
-.header-contact-block-phone a {
   text-decoration: none;
   color: inherit;
 }
@@ -112,11 +107,6 @@ body {
   color: #717171;
   cursor: pointer;
   font-size: 16px;
-}
-
-.header-contact-block {
-  position: relative;
-  top: -20px;
 }
 
 /* MENU */

@@ -46,15 +46,35 @@ $(document).ready(function () {
     $(this).find(".subcategory-dropdown").slideToggle();
   });
 
-  // Add hover event to category items
-  $(".category-item").hover(
-    function () {
-      $(this).find(".subcategory-dropdown").stop(true, true).slideDown("slow");
-    },
-    function () {
-      $(this).find(".subcategory-dropdown").stop(true, true).slideUp("slow");
+  // Check the initial screen width
+  if ($(window).width() > 830) {
+    enableHoverScript();
+  }
+
+  // Update the hover script on window resize
+  $(window).resize(function() {
+    if ($(window).width() > 830) {
+      enableHoverScript();
+    } else {
+      disableHoverScript();
     }
-  );
+  });
+
+  function enableHoverScript() {
+    $('.category-item').hover(
+      function() {
+        $(this).find('.subcategory-dropdown').stop(true, true).slideDown('slow');
+      },
+      function() {
+        $(this).find('.subcategory-dropdown').stop(true, true).slideUp('slow');
+      }
+    );
+  }
+
+  function disableHoverScript() {
+    $('.category-item').off('mouseenter mouseleave');
+  }
+
 });
 
 /* MODAL BLOCK */
