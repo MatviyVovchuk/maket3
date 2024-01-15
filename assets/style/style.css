@@ -70,8 +70,8 @@ body {
 }
 
 .company-name {
-  font-size: 22px;
-  margin-bottom: 5px;
+  font-size: 30px;
+  margin-bottom: 10px;
 }
 
 /* HEADER RIGHT */
@@ -87,9 +87,18 @@ body {
   padding: 0;
 }
 
+.header-contact-block-phone {
+  line-height: 1.5;
+  display: inline-block;
+  transform: scaleY(1.4);
+  transform-origin: center left;
+  letter-spacing: 1.8px;
+  font-weight: 300;
+}
+
 .header-contact-block-phone a,
 .header-contact-block p {
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .header-contact-block-phone a {
@@ -103,6 +112,11 @@ body {
   color: #717171;
   cursor: pointer;
   font-size: 16px;
+}
+
+.header-contact-block {
+  position: relative;
+  top: -20px;
 }
 
 /* MENU */
@@ -899,6 +913,10 @@ textarea.error {
 
   .header-logo-block {
     margin-bottom: 10px;
+  }
+  
+  .header-contact-block {
+    position: initial;
   }
 
   /* SLIDER */
