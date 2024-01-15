@@ -203,7 +203,7 @@ $(document).ready(function () {
     console.log(phoneField.val().replace(/\D/g, ""));
 
     if (phoneValue === "") {
-      setValidationError(phoneField, "Будь ласка, введіть номер телефону.");
+      setValidationError(phoneField, "Введіть номер телефону.");
       return false;
     }
 
@@ -211,7 +211,7 @@ $(document).ready(function () {
     if (!phoneRegex.test(phoneValue)) {
       setValidationError(
         phoneField,
-        "Будь ласка, введіть правильний номер телефону."
+        "Введіть правильний номер телефону."
       );
       return false;
     }
@@ -226,7 +226,7 @@ $(document).ready(function () {
     if (emailField === "") {
       setValidationError(
         phoneField,
-        "Будь ласка, введіть адресу електронної пошти."
+        "Введіть адресу електронної пошти."
       );
       return false;
     }
@@ -234,7 +234,7 @@ $(document).ready(function () {
     if (!isValidEmail(emailValue)) {
       setValidationError(
         emailField,
-        "Будь ласка, введіть правильну адресу електронної пошти."
+        "Введіть правильну адресу електронної пошти."
       );
       return false;
     }
