@@ -1,8 +1,8 @@
 /* MENU BURGER */
 
-document.querySelector(".menu-burger").addEventListener("click", function () {
-  this.classList.toggle("active");
-  document.querySelector(".menu-nav-ul").classList.toggle("open");
+$(".menu-burger").on("click", function () {
+  $(this).toggleClass("active");
+  $(".menu-nav-ul").toggleClass("open");
 });
 
 /* SLIDER */
@@ -47,50 +47,182 @@ $(document).ready(function () {
   });
 });
 
-// Function to open the modal with slow fade effect
-function openModal() {
-  var modalBackground = $("#modal_background");
-  var modal = $("#modal");
+/* MODAL BLOCK */
 
-  // Set initial styles
-  modalBackground.css("display", "block");
-  modal.css("display", "block");
+$(document).ready(function () {
+  // Function to open the modal with slow fade effect
+  function openModal() {
+    clearValidationStyles();
+    
+    var modalBackground = $("#modal_background");
+    var modal = $("#modal");
 
-  // Trigger reflow
-  void modalBackground[0].offsetWidth;
-  void modal[0].offsetWidth;
+    // Set initial styles
+    modalBackground.css("display", "block");
+    modal.css("display", "block");
 
-  // Apply fade-in effect
-  modalBackground.css("opacity", "1");
-  modal.css("opacity", "1");
+    // Trigger reflow
+    void modalBackground[0].offsetWidth;
+    void modal[0].offsetWidth;
 
-  // You can also add other effects here if needed, like moving the modal
+    // Apply fade-in effect
+    modalBackground.css("opacity", "1");
+    modal.css("opacity", "1");
 
-  // Add an event listener to close the modal when clicking outside of it
-  modalBackground.on("click", closeModal);
-}
+    // Disable scroll
+    $("body").addClass("modal-active");
 
-// Function to close the modal
-function closeModal() {
-  var modalBackground = $("#modal_background");
-  var modal = $("#modal");
+    // Add an event listener to close the modal when clicking outside of it
+    modalBackground.on("click", closeModal);
+  }
 
-  // Apply fade-out effect
-  modalBackground.css("opacity", "0");
-  modal.css("opacity", "0");
+  // Function to close the modal
+  function closeModal() {
+    var modalBackground = $("#modal_background");
+    var modal = $("#modal");
 
-  // Hide modal and background after the animation is complete
-  setTimeout(function () {
-    modalBackground.css("display", "none");
-    modal.css("display", "none");
-  }, 500); // Adjust this value to match the transition duration
-}
+    // Apply fade-out effect
+    modalBackground.css("opacity", "0");
+    modal.css("opacity", "0");
 
-// Add event listener to open modal when the link is clicked
-$("#openModalButton").on("click", function (event) {
-  event.preventDefault(); // Prevent the default link behavior
-  openModal();
+    // Enable scroll
+    $("body").removeClass("modal-active");
+
+    // Hide modal and background after the animation is complete
+    setTimeout(function () {
+      modalBackground.css("display", "none");
+      modal.css("display", "none");
+      // Reset the form
+      $("#modal_form")[0].reset();
+    }, 500); // Adjust this value to match the transition duration
+  }
+
+  // Add event listener to open modal when the link is clicked
+  $("#openModalButton").on("click", function (event) {
+    event.preventDefault(); // Prevent the default link behavior
+    openModal();
+  });
+
+  // Add event listener to close modal when the close button is clicked
+  $("#modal_close_button").on("click", closeModal);
+
+  /* MODAL FORM VALIDATION */
+
+  // Add mask to phone field
+  $("#field_phone").inputmask({ mask: "+38 (999) 999-99-99" });
+
+  // Form submit
+  $("#modal_form").on("submit", function (event) {
+    clearValidationStyles();
+
+    // Check all field together
+    let isFormValid = true;
+
+    if (!validateName()) {
+      isFormValid = false;
+    }
+    if (!validatePhone()) {
+      isFormValid = false;
+    }
+    if (!validateEmail()) {
+      isFormValid = false;
+    }
+    if (!validateMessage()) {
+      isFormValid = false;
+    }
+
+    if (!isFormValid) {
+      event.preventDefault();
+    }
+
+    // Check field one by one
+    // if (!validateName() || !validatePhone() || !validateEmail()) {
+    //   event.preventDefault();
+    //   console.log("NOT VALID");
+    // }
+
+    // Uncomment the line below to submit the form or remove event.preventDefault();
+    // $(this).unbind('submit').submit();
+    event.preventDefault();
+  });
+
+  function validateName() {
+    const nameField = $("#field_name");
+    const nameValue = nameField.val().trim();
+
+    if (nameValue.length < 2 || nameValue.length > 15) {
+      setValidationError(nameField, "Ім'я повинно містити від 2 до 15 символів.");
+      return false;
+    }
+
+    if (/\d/.test(nameValue)) {
+      setValidationError(nameField, "Ім'я не повинно містити цифри.");
+      return false;
+    }
+
+    return true;
+  }
+
+  function validatePhone() {
+    const phoneField = $("#field_phone");
+    const phoneValue = phoneField.val().replace(/\D/g, ""); // Remove non-numeric characters
+
+    console.log(phoneField.val().replace(/\D/g, ""));
+
+    if (phoneValue === "") {
+      setValidationError(phoneField, "Будь ласка, введіть номер телефону.");
+      return false;
+    }
+
+    const phoneRegex = /^\d{12}$/; // Assumes a 10-digit Ukrainian phone number with 38 phone code
+    if (!phoneRegex.test(phoneValue)) {
+      setValidationError(phoneField, "Будь ласка, введіть правильний номер телефону.");
+      return false;
+    }
+
+    return true;
+  }
+
+  function validateEmail() {
+    const emailField = $("#field_email");
+    const emailValue = emailField.val().trim();
+
+    if (emailField === "") {
+      setValidationError(phoneField, "Будь ласка, введіть адресу електронної пошти.");
+      return false;
+    }
+
+    if (!isValidEmail(emailValue)) {
+      setValidationError(emailField, "Будь ласка, введіть правильну адресу електронної пошти.");
+      return false;
+    }
+
+    return true;
+  }
+
+  function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  function validateMessage() {
+    const messageField = $("#field_message");
+    const messageValue = messageField.val().trim();
+
+    if (messageValue === "") {
+      setValidationError(messageField, "Поле не може бути порожнім.");
+      return false;
+    }
+
+    return true;
+  }
+
+  function setValidationError(element, message) {
+    element.attr("placeholder", message).val(""); // Clear the value
+    element.addClass("error");
+  }
+
+  function clearValidationStyles() {
+    $("input, textarea").removeClass("error").attr("placeholder", "");
+  }
 });
-
-// Add event listener to close modal when the close button is clicked
-$("#modal_close_button").on("click", closeModal);

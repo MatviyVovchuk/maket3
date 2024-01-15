@@ -305,17 +305,21 @@
         <button id="modal_close_button">&#x2715;</button>
         <!-- &#215; &#10006; &#x2715; -->
       </div>
-      <form action="/submit_action" method="post">
+      <form action="/submit_action" method="post" id="modal_form">
         <div id="form_fields_container">
-          <h1>ЗВОРОТНІЙ ЗВ'ЯЗОК</h1>
-          <p>Ваше імя*</p>
-          <input type="text" id="field_name" placeholder="" required />
-          <p>Телефон*</p>
+          <h1>ЗВОРОТНІЙ ЗВ'ЯЗОК </h1>
+          <label for="field_name">Ваше імя*</label>
+          <input type="text" id="field_name" placeholder="" required minlength="2" maxlength="15"/>
+
+          <label for="field_phone">Телефон*</label>
           <input type="text" id="field_phone" placeholder="" required />
-          <p>Email*</p>
-          <input type="text" id="field_email" placeholder="" required />
-          <p>Повідомлення</p>
-          <textarea name="" id="field_message" cols="20" rows="5"></textarea>
+
+          <label for="field_email">Email*</label>
+          <input type="email" id="field_email" placeholder="" required />
+
+          <label for="field_message">Повідомлення</label>
+          <textarea name="" id="field_message" cols="20" rows="5" required></textarea>
+
           <button id="submit_button">ВІДПРАВИТИ</button>
         </div>
       </form>
@@ -325,6 +329,7 @@
   <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
   <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script type='text/javascript' src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
   <script src="assets/js/slick.min.js"></script>
   <script src="assets/js/app.js"></script>
 </html>
