@@ -38,7 +38,7 @@
               <li><a href="tel:+74997777777">+7(499) 777-77-77</a></li>
               <li><a href="tel:+74997777777">+7(499) 777-77-77</a></li>
             </ul>
-            <p><a href="#">Зворотній зв'язок</a></p>
+            <p><a href="#" id="openModalButton">Зворотній зв'язок</a></p>
           </div>
         </div>
       </header>
@@ -302,12 +302,12 @@
     <div id="modal_background"></div>
     <div id="modal">
       <div id="modal_close">
-        <button>&#x2715;</button>
+        <button id="modal_close_button">&#x2715;</button>
         <!-- &#215; &#10006; &#x2715; -->
       </div>
       <form action="/submit_action" method="post">
         <div id="form_fields_container">
-          <h1>ЗВОРОТНІЙ ЗВ'ЯЗОК </h1>
+          <h1>ЗВОРОТНІЙ ЗВ'ЯЗОК</h1>
           <p>Ваше імя*</p>
           <input type="text" id="field_name" placeholder="" required />
           <p>Телефон*</p>

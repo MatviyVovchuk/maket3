@@ -598,7 +598,7 @@ body {
 /* MODAL FORM */
 
 #modal_background {
-  display: block;
+  /* display: block; */
   position: fixed;
   top: 0;
   left: 0;
@@ -606,11 +606,14 @@ body {
   height: 100%;
   background: rgba(127, 127, 127, 0.5);
   z-index: 1;
+
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
-/* Styles for the modal */
 #modal {
-  display: block;
+  /* display: block; */
   position: fixed;
   top: 50%;
   left: 50%;
@@ -620,6 +623,10 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 2;
   width: 30%;
+
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 #modal_close {
@@ -634,7 +641,6 @@ body {
   left: 100%;
   top: -30px;
 }
-
 
 #modal_close button {
   color: #ffffff;
@@ -686,8 +692,6 @@ body {
   cursor: pointer;
   font-size: 16px;
 }
-
-
 
 /* ADAPTIVE */
 
@@ -794,6 +798,12 @@ body {
     margin-right: 20px;
     width: 370px;
   }
+
+  /* MODAL FORM */
+
+  #modal {
+    width: 40%;
+  }
 }
 @media screen and (max-width: 830px) {
   /* BURGER MENU */
@@ -897,6 +907,12 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
   }
+
+  /* MODAL FORM */
+
+  #modal {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 650px) {
   /* HEADER */
@@ -943,6 +959,12 @@ body {
 
   .store-goods-container {
     width: 550px;
+  }
+
+  /* MODAL FORM */
+
+  #modal {
+    width: 55%;
   }
 }
 @media screen and (max-width: 550px) {
@@ -1018,6 +1040,12 @@ body {
   .footer-menu ul > li {
     padding-bottom: 5px;
   }
+
+  /* MODAL FORM */
+
+  #modal {
+    width: 60%;
+  }
 }
 @media screen and (max-width: 500px) {
   /* SLIDER */
@@ -1040,6 +1068,13 @@ body {
   .menu-burger::after {
     width: 150%;
   }
+
+  /* MODAL FORM */
+
+  #modal {
+    width: 65%;
+    padding: 40px 40px 20px 40px;
+  }
 }
 @media screen and (max-width: 420px) {
   /* SLIDER */
@@ -1061,6 +1096,13 @@ body {
   .content-bottom-text p {
     width: 280px;
   }
+
+  /* MODAL FORM */
+
+  #modal {
+    width: 70%;
+    padding: 20px 20px 10px 20px;
+  }
 }
 @media screen and (max-width: 320px) {
   /* SLIDER */
@@ -1081,5 +1123,12 @@ body {
 
   .content-bottom-text p {
     width: 200px;
+  }
+
+  /* MODAL FORM */
+
+  #modal {
+    width: 75%;
+    padding: 10px 10px 5px 10px;
   }
 }
