@@ -45,6 +45,16 @@ $(document).ready(function () {
     // Toggle the display of the subcategory-dropdown with sliding animation
     $(this).find(".subcategory-dropdown").slideToggle();
   });
+
+  // Add hover event to category items
+  $(".category-item").hover(
+    function () {
+      $(this).find(".subcategory-dropdown").stop(true, true).slideDown("slow");
+    },
+    function () {
+      $(this).find(".subcategory-dropdown").stop(true, true).slideUp("slow");
+    }
+  );
 });
 
 /* MODAL BLOCK */
@@ -53,7 +63,7 @@ $(document).ready(function () {
   // Function to open the modal with slow fade effect
   function openModal() {
     clearValidationStyles();
-    
+
     var modalBackground = $("#modal_background");
     var modal = $("#modal");
 
@@ -151,7 +161,10 @@ $(document).ready(function () {
     const nameValue = nameField.val().trim();
 
     if (nameValue.length < 2 || nameValue.length > 15) {
-      setValidationError(nameField, "Ім'я повинно містити від 2 до 15 символів.");
+      setValidationError(
+        nameField,
+        "Ім'я повинно містити від 2 до 15 символів."
+      );
       return false;
     }
 
@@ -176,7 +189,10 @@ $(document).ready(function () {
 
     const phoneRegex = /^\d{12}$/; // Assumes a 10-digit Ukrainian phone number with 38 phone code
     if (!phoneRegex.test(phoneValue)) {
-      setValidationError(phoneField, "Будь ласка, введіть правильний номер телефону.");
+      setValidationError(
+        phoneField,
+        "Будь ласка, введіть правильний номер телефону."
+      );
       return false;
     }
 
@@ -188,12 +204,18 @@ $(document).ready(function () {
     const emailValue = emailField.val().trim();
 
     if (emailField === "") {
-      setValidationError(phoneField, "Будь ласка, введіть адресу електронної пошти.");
+      setValidationError(
+        phoneField,
+        "Будь ласка, введіть адресу електронної пошти."
+      );
       return false;
     }
 
     if (!isValidEmail(emailValue)) {
-      setValidationError(emailField, "Будь ласка, введіть правильну адресу електронної пошти.");
+      setValidationError(
+        emailField,
+        "Будь ласка, введіть правильну адресу електронної пошти."
+      );
       return false;
     }
 
